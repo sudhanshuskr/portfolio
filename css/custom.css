@@ -1,5 +1,5 @@
 .cover{
-    background-image: url("../images/cover.jpg");
+    background-image: url("../images/TKCover-crop.jpg");
     background-size: cover;
     background-position: 0 -23vw;
 }
@@ -7,18 +7,43 @@
     padding-top: 3vw;
     padding-bottom: 3vw;
 }
+#frow{
+    height: 350px;
+    border-left: 2px solid #ffffff;
+    border-right:2px solid #ffffff;
+    transition: .2s;
+
+}
 #pixel2{
     transition: .2s;
 }
 #product-image{
     max-width: 70% !important;
 }
-#pixel2:hover{
-    background-color: #343a40b0 !important;
+#frow:hover{
+    /*background-color: #343a40b0 !important;
     color: #f8f9fa  !important;
-    border-left: 2px solid rgb(0, 0, 0);
-    border-right:2px solid rgb(0, 0, 0);
-    
+    border-left: 2px solid #343a40b0;
+    border-right:2px solid #343a40b0;
+    */
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0)  !important;
+    border-left: 2px solid #343a40b0;
+    border-right:2px solid #343a40b0;
+
+}
+#pixel2:hover{
+    /*background-color: #343a40b0 !important;
+    color: #f8f9fa  !important;
+    border-left: 2px solid #343a40b0;
+    border-right:2px solid #343a40b0;
+    */
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0)  !important;
+    border-left: 1px solid #343a40b0;
+    border-right:px solid #343a40b0;
+
 }
 .shadow{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
