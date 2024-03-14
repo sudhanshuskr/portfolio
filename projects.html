@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,14 +16,13 @@
     <title>Sudhanshu Shankar</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row" >
-
-
-        <div class="container-fluid col-4 col-sm-2 py-5-custom text-center bg-dark text-light" id="pixel2">
-            <p class="mb-0">Pixel 2</p>
+    <div class="container-fluid ">
+      <div class="row align-middle" id = "frow">
+          
+        <div class="container-fluid align-self-center col-4 col-sm-2 py-5-custom text-center   text-dark" >
+          <p class="mb-0"><img src = "images/UCSD_logo.png" class="img-fluid"></p>
         </div>
-        
+          
           
         <div class = "container-fluid col-8 col-sm-10 cover">
         
@@ -38,20 +38,23 @@
       <h3 class="mr-auto ml-3 mb-0 d-sm-none">Home</h3>
       <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav justify-content-start mr-auto">
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Hardware</a>
+            <a class="nav-link" href="projects.html">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="usability.html">Usability</a>
+            <a class="nav-link" href="usability.html">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="usability.html">Education</a>
           </li>
         </ul>
 
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link " type="button" data-target="#shopnow" data-toggle="modal"><i class="fa fa-shopping-cart"></i> Shop Now</a>
+            <a class="nav-link " type="button" data-target="#shopnow" data-toggle="modal"><i class="fa fa-envelope"></i> Contact Me</a>
           </li>
         </ul>
       </div>
@@ -61,49 +64,39 @@
       <div class="modal-dialog" role="content">
         <div class="modal-content" >
           <div class="modal-header bg-light">
-            <h4 class="modal-title">Shop Now</h4>
+            <h4 class="modal-title"><i class="fa fa-envelope"></i>  Contact Me</h4>
             <button class="close" data-dismiss = "modal"><span>&times;</span></button>
           </div>
           <div class="modal-body">
             <form>
-                <div class="row form-group">
-                  <label for="name" class="col-sm-4 col-form-label">Name</label>
-                  <div class="col-sm-8">
-                    <input type="text" name="name" id="name" placeholder="Name" class="form-control">
-                  </div>
+              <div class="row form-group">
+                <label for="name" class="col-sm-4 col-form-label">Your Name</label>
+                <div class="col-sm-8">
+                  <input type="text" name="name" id="name" placeholder="Your name" class="form-control">
                 </div>
-                <div class="row form-group">
-                  <label for="lastname" class="col-sm-4 col-form-label">Last Name</label>
-                  <div class="col-sm-8">
-                    <input type 
-                    = "text" name = "lastname" id="lastname" placeholder = "Last Name" class = "form-control">
-                  </div>
+              </div>
+              <div class="row form-group">
+                <label for="lastname" class="col-sm-4 col-form-label">Subject</label>
+                <div class="col-sm-8">
+                  <input type 
+                  = "text" name = "lastname" id="lastname" placeholder = "A short description" class = "form-control">
                 </div>
-                <div class="row form-group">
-                  <label for="phone" class="col-sm-4 col-form-label">Phone</label>
-                  <div class="col-sm-8">
-                    <input type="tel" name="phone" id="phone" placeholder="Phone No." class="form-control">
-                  </div>
+              </div>
+              <div class="row form-group">
+                <label for="phone" class="col-sm-4 col-form-label">Your message</label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <div class="row form-group">
-                  <label for="email" class="col-sm-4 col-form-label">Email ID</label>
-                  <div class="col-sm-8">
-                    <input type="text" name="email" id="email" placeholder="example@abc.com" class="form-control">
-                  </div>
+              </div>
+              <div class="row form-group">
+                <label for="email" class="col-sm-4 col-form-label">Email ID</label>
+                <div class="col-sm-8">
+                  <input type="text" name="email" id="email" placeholder="So that I can contact you back :)" class="form-control">
                 </div>
-                <div class="row form-group">
-                  <label for="country" class="col-sm-4 col-form-label">Country</label>
-                  <div class="col-sm-8">
-                    <select class="form-control" id="country">
-                      <option>India</option>
-                      <option>USA</option>
-                      <option>Russia</option>
-                      <option>Germany</option>
-                      <option>France</option>
-                    </select>
-                  </div>
-                </div>
-              </form>
+              </div>
+              
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -112,7 +105,6 @@
 
     
     
-
     <div class="container">
         <div class="row">
             <div class="col-8">
