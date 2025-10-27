@@ -1,0 +1,82 @@
+.home-section {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 5vh 3vw; /* reduced padding from section */
+  min-height: calc(100vh - 60px);
+}
+
+.cards-container {
+  display: flex;
+  gap: 15px; /* smaller gap between left and right */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* make right-stack full height */
+}
+
+.home-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px; /* reduced padding */
+  padding-left: 5%; /* reduced padding */
+  padding-right: 5%; /* reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #222222;;
+  line-height: 1.5;
+
+  /* max-width: 400px; */
+  flex: 1 1 300px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify; /* justify text */
+}
+
+.intro-card {
+  flex: 2 1 400px; /* taller than each uni card */
+}
+
+.right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* smaller gap */
+  flex: 1 1 200px;
+  justify-content: space-between; /* makes combined height match intro-card */
+}
+
+.home-card h1,
+.home-card h2,
+.home-card h3,
+.home-card p {
+  text-align: justify; /* justify headings & paragraphs */
+  margin-bottom: 10px; /* tighter spacing */
+}
+
+.uni-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #1a659e;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-card {
+    max-width: 90%;
+  }
+
+  .right-stack {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
