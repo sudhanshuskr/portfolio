@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Import Routes instead of Switch
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 import Header from './components/Header';
 import DotGrid from './components/DotGrid';
@@ -53,6 +53,7 @@ function App() {
         <main style={{ position: "relative", zIndex: 1 }}>
           <Routes>  {/* Use Routes instead of Switch */}
             <Route path="/" element={<Home />} />  {/* Home route */}
+            <Route path="/portfolio" element={<Home />} />  {/* Home route */}
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
