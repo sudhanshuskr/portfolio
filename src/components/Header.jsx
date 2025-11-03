@@ -1,35 +1,36 @@
-import React, { useState } from 'react'; // ✅ add useState here
-
-import { Link } from 'react-router-dom';  // Use Link to navigate between pages
-import '../styles/Header.css';
+import React, { useState } from 'react'; 
+import { Link } from 'react-router-dom';  
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={`header ${menuOpen ? 'menu-open' : ''}`}>
+    <header className={`flex justify-between items-center p-4 bg-gray-800 bg-opacity-50 backdrop-blur-md fixed top-0 left-0 w-full z-50`}>
       {/* Logo */}
-      <div className="logo">
-        <span className="logo-dark">Sudhanshu Shankar</span>
-        <span className="logo-faded">Portfolio</span>
+      <div className="flex items-center space-x-2">
+        <span className="md:text-2xl text-sm font-semibold text-white">Sudhanshu Shankar</span>
+        <span className="md:text-2xl text-sm text-gray-300">Portfolio</span>
       </div>
 
       {/* Nav */}
-      <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-        <ul>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="/skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
-          <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
-          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+      <nav className={`flex flex-col md:flex-row md:space-x-10 md:items-center ${menuOpen ? 'block' : 'hidden'} md:block`}>
+        <ul className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
+          <li><Link to="/" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/skills" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Skills</Link></li>
+          <li><Link to="/projects" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Projects</Link></li>
+          <li><Link to="/contact" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </nav>
 
-      {/* Hamburger */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+      {/* Hamburger icon */}
+      <div className="md:hidden flex flex-col justify-center items-center space-y-2" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* First bar */}
+        <div className={`w-6 h-0.5 bg-white transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+        {/* Second bar */}
+        <div className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${menuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+        {/* Third bar */}
+        <div className={`w-6 h-0.5 bg-white transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
       </div>
     </header>
   );

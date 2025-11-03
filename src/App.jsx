@@ -1,40 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
-
-
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.css';
@@ -55,7 +18,7 @@ function App() {
         position: "relative",
         minHeight: "100vh",
         backgroundColor: "transparent", // transparent so DotGrid shows fully
-        color: "#fff"
+        color: "#EEPPEE"
       }}>
         {/* Background DotGrid */}
         <div style={{
@@ -64,9 +27,8 @@ function App() {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1, // behind everything
-          color: "#222222"
-        }}>
+          zIndex: -1
+        }} className='bg-cyan-100'>
           {/* <DotGrid
             dotSize={4}
             gap={8}
@@ -82,12 +44,12 @@ function App() {
             speed={0.02}
             squareSize={120}
             direction='left' // up, down, left, right, diagonal
-            borderColor='#f6f6dbff'
+            borderColor='#ffffff'
             hoverFillColor='#dde0d5ff'
           />
         </div>
         <Header />
-        <main style={{ position: "relative", zIndex: 1 }}>
+        <main style={{ position: "relative", zIndex: 1 }} className='md:p-20  p-8'>
           <Routes>  {/* Use Routes instead of Switch */}
             <Route path="/" element={<Home />} />  {/* Home route */}
             <Route path="/portfolio" element={<Home />} />  {/* Home route */}
