@@ -5,16 +5,15 @@ import Header from './components/Header';
 import DotGrid from './components/DotGrid';
 import Squares from './components/Squares';
 import Home from './pages/Home';
-import About from './pages/About';
+import Achievements from './pages/Achievements';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-
 function App() {
   return (
     <Router>
-      <div className="App" style={{
+      <div className="App font-mono" style={{
         position: "relative",
         minHeight: "100vh",
         backgroundColor: "transparent", // transparent so DotGrid shows fully
@@ -53,7 +52,7 @@ function App() {
           <Routes>  {/* Use Routes instead of Switch */}
             <Route path="/" element={<Home />} />  {/* Home route */}
             <Route path="/portfolio" element={<Home />} />  {/* Home route */}
-            <Route path="/about" element={<About />} />
+            <Route path="/achievements" element={<Achievements />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />

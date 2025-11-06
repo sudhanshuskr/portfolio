@@ -70,17 +70,17 @@ function Home() {
       
         {/* Add Company components */}
           <Company
-            logo="src/assets/images/Tsmc.png"
+            logo="/portfolio/images/Tsmc.png"
             name="Taiwan Semicondustor Manufacturing Company"
             location="Hsinchu, Taiwan"
           />
           <Company
-            logo="src/assets/images/mastercard.png"
+            logo="/portfolio/images/mastercard.png"
             name="Mastercard"
             location="Pune, India"
           />
           <Company
-            logo="src/assets/images/sae.png" 
+            logo="/portfolio/images/sae.png" 
             name="FSAE"
             location="India"
           />

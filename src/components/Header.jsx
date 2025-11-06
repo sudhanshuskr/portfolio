@@ -16,8 +16,7 @@ function Header() {
       <nav className={`flex flex-col md:flex-row md:space-x-10 md:items-center ${menuOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
           <li><Link to="/" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="/skills" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Skills</Link></li>
+          <li><Link to="/achievements" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Achievements</Link></li>
           <li><Link to="/projects" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Projects</Link></li>
           <li><Link to="/contact" className="text-sm md:text-lg text-white hover:text-amber-500" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
