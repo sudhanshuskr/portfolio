@@ -5,6 +5,7 @@ import profilePic from '../assets/images/MARL-demo.jpg';
 
 // Import the Company component
 import Company from '../components/Company';
+import WorkExperienceCard from '../components/WorkExperienceCard';
 
 function Home() {
   return (
@@ -36,11 +37,14 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-cyan-300 shadow-lg p-6 rounded-lg col-span-1 row-span-1">
+          <div className="bg-zinc-200 shadow-lg p-6 rounded-lg col-span-1 row-span-1 border-2 border-blue-800">
             {/* This is a smaller card */}
-            <div className="grid grid-cols-1">
-              <p className="mt-2 text-sm md:text-lg text-black text-center">
-                Working as a <span className="text-blue-700 font-semibold">Robotics Engineer</span> and developing autonomous UAV swarms at Murano Corporation
+            <div className="grid grid-cols-9">
+              <div className='col-span-1'>
+                <img src='/portfolio/images/murano_corp_logo.jpg' alt="Sudhanshu Shankar" className="object-cover col-span-1" />
+              </div>
+              <p className="mt-2 p-4 col-span-8 text-semibold text-sm md:text-lg text-black text-center">
+                Working as a <span className="text-blue-700 font-semibold">Robotics Engineer</span> and developing <span className='underline'>autonomous UAV swarms</span> at Murano Corporation
               </p>
             </div>
           </div>
@@ -48,17 +52,33 @@ function Home() {
 
         {/* Right: stacked university cards */}
         <div className="grid grid-cols-1 gap-6 mt-8 md:mt-0 md:col-span-2 text-center">
-          <div className="bg-cyan-300 shadow-lg p-6 rounded-lg row-span-2">
-            <img src={ucLogo} alt="UCSD" className="w-24 h-24 object-contain mx-auto" />
-            <h3 className="text-black text-2xl font-semibold mt-4">University of California, San Diego</h3>
-            <p className="text-lg text-black">Master’s in Mechanical Engineering</p>
-            <p className="text-lg text-black">2022 – 2024</p>
-          </div>
+<div className="bg-cyan-300 shadow-lg p-6 rounded-lg row-span-2">
+  <img
+    src={ucLogo}
+    alt="UCSD"
+    className="w-24 h-24 object-contain mx-auto"
+  />
+  <h3 className="text-black text-2xl font-semibold mt-4">
+    University of California, San Diego
+  </h3>
+  <p className="text-lg text-black">Master’s in Mechanical Engineering</p>
+  <p className="text-lg text-black">2022 – 2024</p>
+
+  {/* Compact GPA Banner */}
+  <div className="mt-6 inline-block bg-blue-900 text-white py-1 px-4 rounded-full text-lg font-semibold">
+    GPA: <span className="text-yellow-300">3.81</span> / 4.0
+  </div>
+</div>
+
           <div className="bg-cyan-300 shadow-lg p-6 rounded-lg row-span-2">
             <img src={iitLogo} alt="IIT Kharagpur" className="w-24 h-24 object-contain mx-auto" />
             <h3 className="text-black text-2xl font-semibold mt-4">IIT Kharagpur</h3>
             <p className="text-lg text-black">B.Tech in Mechanical Engineering</p>
             <p className="text-lg text-black">2018 – 2022</p>
+              {/* Compact GPA Banner */}
+  <div className="mt-6 inline-block bg-blue-900 text-white py-1 px-4 rounded-full text-lg font-semibold">
+    GPA: <span className="text-yellow-300">9.19</span> / 10.0
+  </div>
           </div>
         </div>
       </div>
@@ -66,9 +86,9 @@ function Home() {
       {/* Experience Row */}
       <div className="py-10 px-5">
         {/* <h2 className="text-xl font-semibold text-center text-black">Experience:</h2> */}
-       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-6 mt-6">
-      
-        {/* Add Company components */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-6 mt-6">
+
+          {/* Add Company components */}
           <Company
             logo="/portfolio/images/Tsmc.png"
             name="Taiwan Semicondustor Manufacturing Company"
@@ -80,11 +100,12 @@ function Home() {
             location="Pune, India"
           />
           <Company
-            logo="/portfolio/images/sae.png" 
+            logo="/portfolio/images/sae.png"
             name="FSAE"
             location="India"
           />
         </div>
+       
       </div>
     </section>
   );

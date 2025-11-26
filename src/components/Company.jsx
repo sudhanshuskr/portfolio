@@ -9,10 +9,10 @@ const Company = ({ logo, name, location }) => {
       <img src={logo} alt={name} className="w-16 h-16 object-contain transition-transform duration-300" />
 
       {/* Company name */}
-      <h3 className="text-lg text-center">{name}</h3>
+      <h3 className="text-sm md:text-lg text-center">{name}</h3>
 
       {/* Company location */}
-      <p className="text-sm text-gray-100 text-center">{location}</p>
+      <p className="text-xs md:text-sm text-gray-100 text-center">{location}</p>
 
       {/* Optional: Add a horizontal divider */}
       <div className="w-full h-0.5 bg-gray-300 mt-2"></div>
